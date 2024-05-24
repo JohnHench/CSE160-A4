@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- For minecraft textures go to 
+https://minecraft.fandom.com/wiki/List_of_block_textures
+
+Download texture
+
+Then convert it to 64x64 with this 
+https://compresskaru.com/64x64-image-converter-online/
+
+
+-->
+<style>
+	.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#textArea {
+    margin-right: 40px; /* Adjust margin as needed */
+}
+
+</style>
+<head>
+  	<meta charset="utf-8" />
+  	<title>Assignment 4</title>
+</head>
+
+<body onload="main()">
+	<canvas id="webgl" width="600" height="600">
+		Please use a browser that supports "canvas"
+	</canvas>
+
+	<p>
+		<p id="numdot"> Error with performance counter </p>
+    </p>
+	<p>
+	  Animate:
+	  <button type="button" id="on">ON</button>
+	  <button type="button" id="off">OFF</button>
+	  Normals:
+	  <button type="button" id="normal_on">ON</button>
+	  <button type="button" id="normal_off">OFF</button>
+	  Rotate (Camera): <input type="range" min="-180" max="180" value="0" class="slider" id="angleSlide">
+	</p>
+
+	<p>
+		Light:
+		<button type="button" id="light_on">ON</button>
+		<button type="button" id="light_off">OFF</button>
+		Light Animation:
+		<button type="button" id="light_animate_ON">ON</button>
+		<button type="button" id="light_animate_OFF">OFF</button>
+		Lighting Color: <input type="range" min="0" max="10" value="0" class="slider" id="light_color">
+		<p></p>
+		Move Light:
+		X: <input type="range" min="-250" max="250" value="0" class="slider" id="light_pos_X">
+		Y: <input type="range" min="-250" max="250" value="100" class="slider" id="light_pos_Y">
+		Z: <input type="range" min="-250" max="250" value="-200" class="slider" id="light_pos_Z">
+	</p>
+
+	<p>
+		<b>Leg Slider:</b>
+		Front Left: <input type="range" min="-20" max="20" value="0" class="slider" id="front_Left">
+		Front Right: <input type="range" min="-20" max="20" value="0" class="slider" id="front_Right">
+		Back Left: <input type="range" min="-10" max="10" value="0" class="slider" id="back_Left">
+		Back Right: <input type="range" min="-10" max="10" value="0" class="slider" id="back_Right">
+	</p>
+	
+	<p>
+		<b>&#128069; FREAK MODIFIER &#128069;:</b>
+		Base: <input type="range" min="-5" max="5" value="0" class="slider" id="base">
+		Mid: <input type="range" min="-5" max="5" value="0" class="slider" id="mid">
+		End: <input type="range" min="-5" max="5" value="0" class="slider" id="end">
+	</p>
+
+
+	<p>
+		<p>
+			John Hench
+		</p>
+		Notes to grader: Got rid of the maze for performance reasons with the lighting (it was super laggy).
+	</p>
+	<script src="../lib/webgl-utils.js"></script>
+	<script src="../lib/webgl-debug.js"></script>
+	<script src="../lib/cuon-utils.js"></script>
+	<script src="../lib/cuon-matrix-cse160.js"></script>
+	<script src="Triangle.js"></script>
+	<script src="Cube.js"></script>
+    <script src="Camera.js"></script>
+	<script src="asgn4.js"></script>
+	<script src="Sphere.js"></script>	
+</body>
+
+</html>
